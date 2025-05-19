@@ -40,7 +40,7 @@ jobs:
       if: always()
       with:
         name: Cucumber Report
-        path: reports/
+        path: reports
 
     #deploy to GitHub Pages
     - name: Deploy report to Github Pages
@@ -48,7 +48,7 @@ jobs:
       uses: peaceiris/actions-gh-pages@v4.0.0
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: reports/
+        publish_dir: reports
       
     
     
